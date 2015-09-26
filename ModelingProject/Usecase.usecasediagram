@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="a42972e4-ea9b-493b-b69e-8d17aced52b0" name="Usecase" linkedPackageId="826101e8-dbaf-4287-8cea-2f5d1aaaf4d1" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="c5cebb73-ac80-423d-b0a1-73bcee56d190">
+      <elementDefinition Id="70bd5e17-b0ca-4f4d-b02f-fdde93d4901c" />
+      <body>成员矩阵，每一个任务成员显示头像，任务状态，教师可以启动，暂停成员的任务，也可以批量操作成员的任务，可以显示全部，也可以按小组显示</body>
+      <annotatedElements>
+        <useCaseMoniker Id="8e21e167-fecb-474c-9302-e10f9af3bfd8" LastKnownName="查看任务版" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="226e4cc9-f6ba-4491-8703-45eb0e8521ca">
+      <profileInstance Id="8e62c3da-a99b-4ae9-afe7-5eeb1b0f9ee9" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0695efca-5f73-4b5f-a512-6c787f7bb5b8">
+      <profileInstance Id="ae632b37-b7b3-4a6a-8044-cd1c1dc36a10" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="da13bf53-148b-4552-bfa9-1c0ebddbd36d" name="教师" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="25dbee3d-92aa-4fd8-8550-46418653c653" />
+        <targetEnds>
+          <association Id="18c9b8de-7732-4d46-b0d2-6641737000be" isDerived="false" sourceEndRoleName="教师" targetEndRoleName="管理学生" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="064be767-44ca-4dea-aa16-ff6432cabcf4" LastKnownName="管理学生" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="71f1ce37-4fee-4faf-9b5d-1024872ed0e5" name="教师" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4e2132ed-8b7c-46df-83ab-87115c4807d9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f860373c-93b3-46ad-85f7-4caf97673dbc" name="管理学生" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fd63404b-94f9-4a30-8697-011728f3801e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="138dd890-914a-4962-b06b-65a0f5af9187" />
+          </association>
+          <association Id="ec369481-5dbf-4703-9765-e70e1028385e" isDerived="false" sourceEndRoleName="教师" targetEndRoleName="管理任务" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2e2b5ff3-650a-4824-8041-e25df9da529c" LastKnownName="管理任务" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bf09852c-5db0-436d-a6ed-c69e22528835" name="教师" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b9734911-0bca-4f4f-87f9-6338fcbd4d10" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4ca8455a-964c-44dc-9f1a-e71eb8951dad" name="管理任务" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e59b9a9a-4875-419c-9bfd-e5ca66b6ac3d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7c229edd-9259-4a4a-9ae4-d9688fe06a0f" />
+          </association>
+          <association Id="022bec8c-265b-45d7-ac97-b9b66b49789f" isDerived="false" sourceEndRoleName="教师" targetEndRoleName="发起任务板" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="16f9cf8f-fa57-41e1-8c82-d620e9d85a72" LastKnownName="发起任务板" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="abe61c8f-018c-47a7-b93d-11aa4058f67e" name="教师" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cbf5d6b2-a81f-4090-a797-5c88170fab16" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="76375b14-a29a-40ca-adbd-fb27f45b630b" name="发起任务板" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="753a3c0d-dffe-4ca9-ace0-08a190c03d44" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b8554b73-f078-41e4-8d3a-a17fea1b673f" />
+          </association>
+          <association Id="0f84c971-388d-4fa5-b344-fe0692421a88" isDerived="false" sourceEndRoleName="教师" targetEndRoleName="管理任务计划" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="75cb695f-af52-4fc0-b732-4791bcd23cb0" LastKnownName="管理任务计划" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="69c0dbbd-67dd-4192-a422-d0be9e3867a2" name="教师" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="db24d700-e20b-41f1-928b-f4dbc0fc62c9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9b4e011e-39c8-4472-922e-1b86ea11f3e9" name="管理任务计划" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fc4de4fc-b6d6-4248-be84-ce846166b2db" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="64958753-cf14-4e23-9202-9f9e8a9ae798" />
+          </association>
+          <association Id="8bc1b29f-ea06-4bfc-bf9e-d143e64a61c4" isDerived="false" sourceEndRoleName="教师" targetEndRoleName="登录系统" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="de70177e-b919-4ab6-845d-6bda77aced8a" LastKnownName="登录系统" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9f762872-9a8a-4a1e-b309-f58de30ac380" name="教师" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b27da8af-4d15-4b09-a72b-96fdeac65361" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8250e00a-b526-4fe6-ba06-037d70c12c47" name="登录系统" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="470e8d86-b061-4fe3-a5b5-5936e1c3fa06" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="369eb416-ba1e-447b-9bf3-1cc7f31b84a2" />
+          </association>
+          <association Id="bae85228-9744-4cd8-9752-95ce259b2106" isDerived="false" sourceEndRoleName="教师" targetEndRoleName="设置" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1e145826-7ec7-498c-9e5e-c71092ccf4b0" LastKnownName="设置" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cd3dea3f-a9f2-467c-887e-ed6dfbb61072" name="教师" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="07549a6f-c7ce-4aef-94b0-f18f7e4c7ffe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="692e775d-e9f2-46c3-baba-4e056af24f4b" name="设置" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="82d7fbb5-de78-4630-b209-6f5edb54bc07" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8e9f5411-6cbe-434d-bf47-d7cb3151b621" />
+          </association>
+          <association Id="ec65efa9-6bf7-4d0c-bb2c-946114b2e866" isDerived="false" sourceEndRoleName="教师" targetEndRoleName="管理班级" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9ec8bc6b-02a1-4b29-ae9a-2d5e5cd22165" LastKnownName="管理班级" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aa9a998e-e9d8-473f-8405-f81efeaac807" name="教师" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="efb65c41-73aa-4b47-bb36-ae7b3a837605" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b40c4481-4c5a-4485-93ed-46bf4ac98217" name="管理班级" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d37b99a4-7a47-483f-8605-7a4e9deae118" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2596a62f-1f4a-4706-a98d-2201a0d24ef6" />
+          </association>
+          <association Id="6f69dd16-9291-4c59-9063-df65e49b4b5b" isDerived="false" sourceEndRoleName="教师" targetEndRoleName="管理任务板" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3f7f61d9-21d9-4541-a597-cf28d12464a1" LastKnownName="管理任务板" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b3b1ead7-878b-4a5d-8d27-7321b68c84c9" name="教师" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1defc568-b463-43e7-8ef4-7ead9317e335" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5ac6ef10-cdae-4f74-afbb-087cfd3a5966" name="管理任务板" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7e5bbf1d-1b7f-4529-9993-e9848368b753" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3b0b3c2c-3d1d-416d-af98-8a1293ab7c6c" />
+          </association>
+          <association Id="9c969887-255c-4b39-b833-5726219aa8ac" isDerived="false" sourceEndRoleName="教师" targetEndRoleName="查看学生任务报告" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7ec61b16-a267-433e-8c8b-e7d95b1d0601" LastKnownName="查看学生任务报告" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d162856a-81e6-451b-97c2-560131f74fcb" name="教师" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8d0e8f8b-2f89-407c-a659-d30b93d30f37" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9dfc3252-41c9-443f-ace9-ddeac3c2e285" name="查看学生任务报告" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="41f3a0e1-aeea-49be-a726-0b8bbb4c64e2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8f489f92-72ea-4588-8aff-ef3e1c30cb25" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2e2b5ff3-650a-4824-8041-e25df9da529c" name="管理任务" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e9ec3d9d-22a7-4ac7-9bda-4b350247ba1a" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="16f9cf8f-fa57-41e1-8c82-d620e9d85a72" name="发起任务板" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ea2d38c1-0014-49d5-8ed6-d927f0a71b0f" />
+        <additions>
+          <include Id="0e15dbfd-b77b-4483-95b4-751d91318122">
+            <useCaseMoniker Id="6b8ffc25-5ca8-4e00-8ff9-d99e472eb2e1" LastKnownName="选择成员" />
+            <elementDefinition Id="d057f32e-ac80-4fdc-9828-ffd4bccbb9d2" />
+          </include>
+          <include Id="6a0f83f3-475a-45ac-a47f-4f734f1db5dc">
+            <useCaseMoniker Id="0fb9a77f-6934-4818-a8c3-3df86819d56e" LastKnownName="任务板分组" />
+            <elementDefinition Id="d229b850-9f01-4219-98b8-8334f53c3fe6" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="064be767-44ca-4dea-aa16-ff6432cabcf4" name="管理学生" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="34316608-a12f-48f5-be8a-010c31abf8c3" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="75cb695f-af52-4fc0-b732-4791bcd23cb0" name="管理任务计划" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a05df474-1f1c-4b3c-af08-da5fd755f3a2" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9ec8bc6b-02a1-4b29-ae9a-2d5e5cd22165" name="管理班级" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8e004109-f855-45b3-9f19-b443fbb1fa21" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3f7f61d9-21d9-4541-a597-cf28d12464a1" name="管理任务板" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="451f8c4f-766f-451c-be20-f60ca35e1061" />
+        <additions>
+          <include Id="85d45253-c0b4-40e9-8a6b-58d4e9699e4b">
+            <useCaseMoniker Id="8e21e167-fecb-474c-9302-e10f9af3bfd8" LastKnownName="查看任务版" />
+            <elementDefinition Id="5ba4d9f8-ae7f-49d4-bcd0-40c621d27a24" />
+          </include>
+          <include Id="f9a89da8-2f48-47a9-991c-83e1573f0b48">
+            <useCaseMoniker Id="0403ba5e-fd71-42c2-919b-d8cb004416c7" LastKnownName="切换小组/全员" />
+            <elementDefinition Id="f6ebcc03-522c-41c1-93ee-98acd50c6cfb" />
+          </include>
+          <include Id="581830a2-9894-4b86-bcd7-0ebe71ed846e">
+            <useCaseMoniker Id="19da7775-4d7a-453b-920c-fe8841398fd9" LastKnownName="启动成员任务" />
+            <elementDefinition Id="322dda9a-5c80-4a80-a009-394dab6170c8" />
+          </include>
+          <include Id="840ca107-d574-4122-89f3-c3a0ca236dc9">
+            <useCaseMoniker Id="ec15a44e-5a58-45fc-8c59-d4670ab9ca86" LastKnownName="暂停成员任务" />
+            <elementDefinition Id="fd710fce-ffce-4bc0-99b3-44b50b5611ea" />
+          </include>
+          <include Id="5278e308-e50b-48d2-8ec6-c5b083fb5d4b">
+            <useCaseMoniker Id="4841f849-a430-47c7-8465-276a7126e4e9" LastKnownName="结束成员任务" />
+            <elementDefinition Id="91566bda-ae3a-4c58-bbee-85c830125754" />
+          </include>
+          <include Id="de532cb9-7d10-40f2-9dec-f488a20ae756">
+            <useCaseMoniker Id="7cd8d8eb-ac92-4690-b9be-ecbabbe07122" LastKnownName="放弃成员任务" />
+            <elementDefinition Id="a6258500-c8f9-4aad-8824-15ed73438eeb" />
+          </include>
+          <include Id="4b742c6a-ff49-47a6-a5d8-7f5986c574cf">
+            <useCaseMoniker Id="0858ab42-c662-4886-98cf-00bb0f5bfce0" LastKnownName="成员任务打分" />
+            <elementDefinition Id="c87b1d20-7e0b-4cf1-840f-4785a8415035" />
+          </include>
+          <include Id="8705ffde-9b1b-4490-a021-c78657bb80d4">
+            <useCaseMoniker Id="64bafc28-a4ef-47c9-900e-b693668411bf" LastKnownName="查看任务板报告" />
+            <elementDefinition Id="d60f1fe3-3475-4d7e-9bbc-0924dd79a47e" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8e21e167-fecb-474c-9302-e10f9af3bfd8" name="查看任务版" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="af959591-70b1-4aee-985d-d0efaad3b857" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0403ba5e-fd71-42c2-919b-d8cb004416c7" name="切换小组/全员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="61ca6b1c-7e4e-4d2d-9af4-089cd328808d" />
+        <extendedCases>
+          <extend Id="67cf98c6-a012-4d16-b6b6-7d6c73f1d67d">
+            <useCaseMoniker Id="e67acb71-ba31-44d2-8f0a-ba56923d63b0" LastKnownName="搜索筛选成员" />
+            <elementDefinition Id="e06b0003-26ed-4805-b625-4d4a405b9495" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="19da7775-4d7a-453b-920c-fe8841398fd9" name="启动成员任务" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e65a6fa2-bbb4-4025-9555-3447f8f0ed28" />
+        <extendedCases>
+          <extend Id="17444fd0-bf31-4be5-b78c-90a14e0d9b35">
+            <useCaseMoniker Id="b55edfe9-be41-4247-8e9a-aff003f67216" LastKnownName="批量启动成员任务" />
+            <elementDefinition Id="ddd43f69-a543-473f-ada5-aae679599a6a" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b55edfe9-be41-4247-8e9a-aff003f67216" name="批量启动成员任务" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ab26b31c-21a8-4f3c-b4c3-76ce37010c2d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ec15a44e-5a58-45fc-8c59-d4670ab9ca86" name="暂停成员任务" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="056a765a-157e-4b9c-87f8-084220aafcaf" />
+        <extendedCases>
+          <extend Id="bd68dea6-d7fc-4484-9f5f-7100fb704166">
+            <useCaseMoniker Id="7d499c18-3cc5-4d16-ab46-7bace0225e40" LastKnownName="批量暂停成员任务" />
+            <elementDefinition Id="39c53062-2e41-491a-b38f-671cca2da56f" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7d499c18-3cc5-4d16-ab46-7bace0225e40" name="批量暂停成员任务" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7c0b34ad-0581-4c3d-b9b5-944253de6e23" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4841f849-a430-47c7-8465-276a7126e4e9" name="结束成员任务" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="14605946-f9e1-46bd-94f5-8ca404e134d4" />
+        <extendedCases>
+          <extend Id="ce19b258-5b50-4abf-8525-ad3fe5a5c6f3">
+            <useCaseMoniker Id="c499195d-6cc3-4b31-824b-40e22a8c8db5" LastKnownName="批量结束成员任务" />
+            <elementDefinition Id="43041cf7-592a-47e0-94d3-7c56c61ccda3" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c499195d-6cc3-4b31-824b-40e22a8c8db5" name="批量结束成员任务" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="20fcbe4b-4016-4040-a46f-41244dff3f9e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7cd8d8eb-ac92-4690-b9be-ecbabbe07122" name="放弃成员任务" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="006c56ca-0895-4b9d-8220-a46cb8e3448a" />
+        <extendedCases>
+          <extend Id="afa4c416-3c58-43aa-8920-dff7f94c3a68">
+            <useCaseMoniker Id="2d555801-d1a0-4480-85a0-3e37ff368855" LastKnownName="批量放弃成员任务" />
+            <elementDefinition Id="1d8a6acc-872c-4af1-b3ce-29fd6954facf" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2d555801-d1a0-4480-85a0-3e37ff368855" name="批量放弃成员任务" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="839bfd44-b385-4ecf-acf3-f13f46b14d3d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e67acb71-ba31-44d2-8f0a-ba56923d63b0" name="搜索筛选成员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="405995ef-1d93-44fd-8605-0dce0f3568b7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6b8ffc25-5ca8-4e00-8ff9-d99e472eb2e1" name="选择成员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="765c5ce0-f03b-43a3-8df1-e37879971b5b" />
+        <extendedCases>
+          <extend Id="847a3838-2604-4e15-82eb-5c29c9402f65">
+            <useCaseMoniker Id="bb0c71a5-d7d0-43f4-a580-4ff2cc55c326" LastKnownName="快速选择成员" />
+            <elementDefinition Id="8fee8f84-e609-43ff-9acc-fada22d31fb0" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bb0c71a5-d7d0-43f4-a580-4ff2cc55c326" name="快速选择成员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="77ee10fa-1bb7-4134-b760-85b56e16478d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0fb9a77f-6934-4818-a8c3-3df86819d56e" name="任务板分组" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1e402894-0202-45a9-b81e-82c6f0ceb11c" />
+        <suppliersInternal>
+          <dependency Id="63233a3a-58a0-4d7a-94f9-8139653878c5">
+            <useCaseMoniker Id="6b8ffc25-5ca8-4e00-8ff9-d99e472eb2e1" LastKnownName="选择成员" />
+            <elementDefinition Id="8a5ceffe-c092-4a85-b158-4a37c3c3d00f" />
+          </dependency>
+        </suppliersInternal>
+        <additions>
+          <include Id="9f0e1364-dc09-44c2-8ee3-1d700f0c6ecc">
+            <useCaseMoniker Id="2231f8df-6ca2-40dc-9f19-ef5a450fa1ae" LastKnownName="创建分组" />
+            <elementDefinition Id="f8baa377-735d-49f3-a609-94724373bbb9" />
+          </include>
+          <include Id="97d34ded-e722-41d4-bee9-3f671478a899">
+            <useCaseMoniker Id="cf1ebde7-6741-4b48-91e8-b32bdb83c56a" LastKnownName="删除分组" />
+            <elementDefinition Id="23491257-4914-4947-8eb3-e3c777ea3f38" />
+          </include>
+          <include Id="1a3c3938-5dbd-4a9f-a55c-5f5d41ffad25">
+            <useCaseMoniker Id="48506b9b-9bfb-4a8b-a2ca-7204039ef261" LastKnownName="修改分组" />
+            <elementDefinition Id="e2332928-b0a8-49ea-ab5e-9827163cdf6c" />
+          </include>
+          <include Id="10d4e946-6f37-4e73-aca8-3e1d63afd416">
+            <useCaseMoniker Id="879d3f65-7816-4b8b-a4a7-3c2131911677" LastKnownName="选择分组成员" />
+            <elementDefinition Id="19820341-3761-452d-82fc-55db53cb93f1" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2231f8df-6ca2-40dc-9f19-ef5a450fa1ae" name="创建分组" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3f042e2c-ffa3-4947-bc4d-4fa2ed677e19" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="48506b9b-9bfb-4a8b-a2ca-7204039ef261" name="修改分组" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5d2ca656-3780-4c5c-aa47-1393e275bae1" />
+        <suppliersInternal>
+          <dependency Id="4b3514c3-03a1-4bcf-add5-3a5e09d2b6bd">
+            <useCaseMoniker Id="2231f8df-6ca2-40dc-9f19-ef5a450fa1ae" LastKnownName="创建分组" />
+            <elementDefinition Id="a168d564-6bc9-4d5d-a92e-058bbce29ead" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="cf1ebde7-6741-4b48-91e8-b32bdb83c56a" name="删除分组" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c31c5126-cb54-4a7b-a55d-7fba8d048307" />
+        <suppliersInternal>
+          <dependency Id="f799d6f5-9f79-4fe0-a1db-b02b3431759d">
+            <useCaseMoniker Id="2231f8df-6ca2-40dc-9f19-ef5a450fa1ae" LastKnownName="创建分组" />
+            <elementDefinition Id="1244a96c-a38e-4e91-b3a2-4f723e57f4c1" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="879d3f65-7816-4b8b-a4a7-3c2131911677" name="选择分组成员" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6faf9dfc-b2f6-463c-b03d-db168749d6c4" />
+        <suppliersInternal>
+          <dependency Id="e64fb0b8-d978-4e2f-bae3-a7a8e6629c17">
+            <useCaseMoniker Id="2231f8df-6ca2-40dc-9f19-ef5a450fa1ae" LastKnownName="创建分组" />
+            <elementDefinition Id="81d1b112-9b75-4707-8d0d-13bb04ea75b0" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="64bafc28-a4ef-47c9-900e-b693668411bf" name="查看任务板报告" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="175af875-eb98-4211-98a8-0a83cd755632" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7ec61b16-a267-433e-8c8b-e7d95b1d0601" name="查看学生任务报告" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4e168ff9-2650-4a2d-bdf3-882cd84013b3" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0858ab42-c662-4886-98cf-00bb0f5bfce0" name="成员任务打分" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5a0f1870-90be-497c-b0a5-c1a7ab99b020" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="de70177e-b919-4ab6-845d-6bda77aced8a" name="登录系统" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2eaab2a6-13a0-4ad6-8bd5-8ee5e89a9058" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1e145826-7ec7-498c-9e5e-c71092ccf4b0" name="设置" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3be072b7-578b-4e31-9ef1-ffd70478fe14" />
+        <additions>
+          <include Id="91a310aa-6943-42e1-9152-f684249458f0">
+            <useCaseMoniker Id="67575a1c-0a68-4978-a8f4-12931db68b09" LastKnownName="个人文件路径" />
+            <elementDefinition Id="aac9f7f6-1614-4a49-8624-8eb30278b1e9" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="67575a1c-0a68-4978-a8f4-12931db68b09" name="个人文件路径" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8346e952-27ac-4e9d-b6ef-c757e90bf6b5" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="826101e8-dbaf-4287-8cea-2f5d1aaaf4d1" name="ModelingProject">
+    <elementDefinition Id="31ef5964-b359-491c-867e-1be205d13220" />
+  </package>
+</useCaseModelRoot>

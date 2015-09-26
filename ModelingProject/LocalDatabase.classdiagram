@@ -1,1 +1,276 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="6781eb92-22c9-46ee-a84d-8831b316d8be" name="LocalDatabase" linkedPackageId="d67ed39e-8b70-4423-b943-8152027541ce" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6e7a144a-5c3f-499c-a427-68d9a8197195" name="学生" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7c63def8-35fe-45fe-829a-52520a4cb276" />
+        <generalsInternal>
+          <generalization Id="e048013e-3165-44cb-ba37-22db44bb4937" isSubstitutable="false">
+            <classMoniker Id="ad8279d5-c99a-4e07-bded-9a2c077d8916" LastKnownName="参与人" />
+            <elementDefinition Id="c44ceb95-3c5d-43f0-a892-9247efa55297" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d640e11b-a8b4-4541-be9e-938c751e2264" name="任务" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c6d977bc-bfc1-4c3d-b50b-41435788666c" />
+        <ownedAttributesInternal>
+          <property Id="4de1db3d-774d-43b5-a73f-d7ad5b651f0b" name="标题" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e0b58e7d-4d6e-47a3-a203-08f72c4c3be7" />
+          </property>
+          <property Id="069b9415-f693-4c10-94b2-7af38d4d4958" name="说明" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7abb757a-9c46-4f28-b4ab-b31b28b2b9f9" />
+          </property>
+          <property Id="e8f222cf-2ad8-4f2b-9561-0e9f7645d4a2" name="发起人" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3948e1e7-40df-47cb-b6aa-4b38cbb2eb9e" />
+          </property>
+          <property Id="f09cd4cf-4615-490d-8a2a-a1c87b144b5d" name="时长" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b85584e3-1e36-4f01-a469-3c1c2af2a3e2" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3803725c-fd31-4554-bf6a-ca9984a2622f" name="教师" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2b908c01-ea2d-4822-a297-29f5a2d8e7d0" />
+        <generalsInternal>
+          <generalization Id="53457b24-bff9-4bac-a860-ff9f92bf9a2c" isSubstitutable="false">
+            <classMoniker Id="ad8279d5-c99a-4e07-bded-9a2c077d8916" LastKnownName="参与人" />
+            <elementDefinition Id="0f3446bc-eeca-4e4f-b470-bf2551f263a7" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ae7e0996-d794-4eb1-8707-073bcc933c2f" name="班级" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="15784685-ef03-4783-a22f-de5204c6fb55" />
+        <generalsInternal>
+          <generalization Id="2cdbdc6d-c7b6-4983-b69c-dee011c3493f" isSubstitutable="false">
+            <classMoniker Id="e425c992-1b92-459f-9a44-7c622bf9511b" LastKnownName="组" />
+            <elementDefinition Id="9ec42233-b7e1-4ae8-a62a-8c285a9aaf55" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="71c61c0a-e438-4044-9f30-a45935c04832" name="小组" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="4f2a2433-eeb4-491b-8691-6c56d4e5b539" name="Lower" value="*">
+                <elementDefinition Id="fd61c10c-4fd1-4340-8b3d-081f250ed3c3" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="1bf5c4cd-8e08-4622-9410-942d1f2532c0" name="Upper" value="*">
+                <elementDefinition Id="a63c7b71-d495-464a-9b56-5084e598b435" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="3c63e413-6e57-474f-8780-1ab21e84de80" />
+          </property>
+          <property Id="d365f06f-7b68-4a72-8844-5f2e9cb72d09" name="学生" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="8462df46-f42e-460b-9d35-46c68ab60ffe" name="Lower" value="*">
+                <elementDefinition Id="46692858-09de-4b2b-9423-24f1cac8e6f0" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="0c36c06a-a185-49d4-8076-b7ee5103c9d2" name="Upper" value="*">
+                <elementDefinition Id="bb4d95e4-28b7-4bab-8201-79ecf51903c6" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="403dd36a-cadf-4fbf-860c-f5248431e77c" />
+          </property>
+          <property Id="e46e9565-57be-4685-899a-5bb821ad8496" name="教师" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e3ac2be0-63c4-45bb-b192-6481b278e09e" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="94a0121a-6ed9-4ff6-b972-72750c0524b0" name="任务板" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9817e8fb-2ddd-4457-98ff-667a514d3b2e" />
+        <ownedAttributesInternal>
+          <property Id="06c36118-fc73-43af-81ac-62cb434f02ac" name="学生" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="d3e626ae-a65e-4dc1-a616-3e3dfac962f0" name="Lower" value="*">
+                <elementDefinition Id="88f59463-aa96-47f2-9c00-0a331f533330" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="2d053b09-3d91-4308-945e-03406f4a60a5" name="Upper" value="*">
+                <elementDefinition Id="9a8b3982-3ebb-424a-b171-449ea6d4b926" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="07164393-e715-4d42-b400-c5d976db9e55" />
+          </property>
+          <property Id="3c40eb85-ad1b-4de8-8735-2f9256b6681f" name="任务" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d889a13b-6568-45ad-a6c9-55f3ce9ee1b7" />
+          </property>
+          <property Id="9141443a-aa3c-44d0-b08b-2124a7271283" name="开始时间" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="509f1f18-9d54-4abf-8b03-b211d45868cc" />
+          </property>
+          <property Id="9d85599d-0bfa-495f-a296-bd7784fc2955" name="结束时间" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9f7f5590-2772-4947-8599-413f4765a86d" />
+          </property>
+          <property Id="df4b0dbc-87be-4189-af18-e76c32b20a53" name="分组" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="06f202c7-a082-4241-bf7f-7c3fdb4186fa" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2dc367ff-bbde-4d9b-b149-fab8cdb8fa10" name="任务记录" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5a740b1e-5697-425c-862e-96f8e85879a1" />
+        <ownedAttributesInternal>
+          <property Id="9123f4a6-ace1-4807-86ef-7da2eb6468dc" name="任务" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="27690b43-35a8-4263-a34d-e4edf9bc4e76" />
+          </property>
+          <property Id="18cf63a1-4920-43ab-a337-8443017902e5" name="学生" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2060b088-3480-4ff7-911d-04455194a0f8" />
+          </property>
+          <property Id="97dddf91-5a65-413b-a5a5-9c59832393ea" name="开始时间" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="72e05eaf-3161-481d-b48f-b722fcfd830b" />
+          </property>
+          <property Id="8ea98dd2-4d67-4854-bb3e-ddb2950f8221" name="结束时间" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="29e09bd9-b452-40ff-99ce-52acb915d9a6" />
+          </property>
+          <property Id="0890eda2-333b-416f-a94c-ca9ba2168936" name="结束原因类型" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d9287acb-ee8f-4923-a145-329a8630e316" />
+          </property>
+          <property Id="70a4f89a-68da-4436-907f-909f89d4b144" name="结束原因" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="24cb7456-c404-4fb8-af4e-2c73ca5103fd" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="6bfa34fe-300b-4ba4-9634-47db54221aad" name="任务结束原因类型" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d8b2737c-872c-4e1d-b1fc-36bc0b39af4f" />
+        <ownedLiterals>
+          <enumerationLiteral Id="57b07b30-f5d2-40cd-a3ff-5a3079a63f28" name="完成">
+            <elementDefinition Id="3437788a-251e-4c10-b74d-0040ccc14e4c" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="5e2dbfab-89f7-47a7-a5dc-94f7aede9573" name="暂停">
+            <elementDefinition Id="4ce1f2af-5a50-47bf-9e7d-a95c7c705988" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="58fc0fe1-377b-4530-bf25-1235034bbe75" name="放弃">
+            <elementDefinition Id="15bd4248-7ac6-4d76-baff-06c4a8bc2f95" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fbaefe01-af41-4dae-b429-2873b45b0b7b" name="任务计划" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="def2c1ef-ae07-45ac-8248-b07b42698395" />
+        <ownedAttributesInternal>
+          <property Id="01d45eee-02de-4d3e-b69d-f746aa972fdd" name="周期" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3d49cdd4-5bd1-4a8f-9ac0-3196668208a8" />
+          </property>
+          <property Id="ae50c3ab-fcc4-4ef4-89d2-c5bbe14678f5" name="任务" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="64c63a1e-1d82-49e2-8fa7-da0bebc62194" />
+          </property>
+          <property Id="3011a73d-c32a-4309-b5eb-14cf46db8b0c" name="学生" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="015de619-ce22-4946-a2dc-e3ad6df7fad6" />
+          </property>
+          <property Id="b713f800-9951-431d-bb9e-ab38234e0946" name="创建人" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="652fac01-39fe-41cc-afc2-bbbc09978cec" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ad8279d5-c99a-4e07-bded-9a2c077d8916" name="参与人" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="577a34eb-8672-4483-b40f-b1003fc10b86" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bf752b99-f58b-4f6d-b3c7-4c2b2a9106e3" name="小组" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="51639677-54f2-49bc-9213-0d27bb7ec0bc" />
+        <generalsInternal>
+          <generalization Id="6f0ad479-3614-48a0-ac92-8b9c4bfa9e1d" isSubstitutable="false">
+            <classMoniker Id="e425c992-1b92-459f-9a44-7c622bf9511b" LastKnownName="组" />
+            <elementDefinition Id="6327a5a9-96a1-42bc-a0e9-d6de0cd253fc" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="46ed8b9a-ee57-402d-b647-bef56d644198" name="组长" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8e14d64c-f644-42f3-8bf6-813845a16ff0" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e425c992-1b92-459f-9a44-7c622bf9511b" name="组" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fa2bc86a-d41e-4c96-8bf9-d4b19a23550c" />
+        <ownedAttributesInternal>
+          <property Id="e6d471b3-8a12-47dd-98c3-3c86d88a66ad" name="学生" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="0f07f00c-405d-45b1-8776-62243709f26a" name="Lower" value="*">
+                <elementDefinition Id="6d852de1-0aa6-4b15-893d-2cbb2f56e885" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="78e275c8-9db3-4348-a783-12620935218a" name="Upper" value="*">
+                <elementDefinition Id="de66fac5-654f-4d9e-9bf0-7a231fe4cf33" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="bc20ea05-a2fb-4ee0-8129-000a860b2166" />
+          </property>
+          <property Id="238a128e-1252-46d5-befb-334295a9a4e0" name="名称" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b9ecb0cc-9fec-4563-9ae8-3ab515c1664c" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fd22e8aa-34d3-44c0-8949-56c3f778f73d" name="任务板记录" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4728ade1-9177-4018-bd23-a1565bcefb8c" />
+        <ownedAttributesInternal>
+          <property Id="e33698f1-bf6a-444d-8517-4ed1d37e605d" name="任务板" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="12a95651-b041-4901-aa16-d489b0134e82" />
+          </property>
+          <property Id="7bd9f622-c978-4969-b9d1-14b52987f0ee" name="操作时间" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bc8d5c85-aa26-4767-8d06-4ec706c8f3cf" />
+          </property>
+          <property Id="9bce477d-f5be-465f-826f-318ad87c20fa" name="操作" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c1f63317-4fc8-49ca-b829-a320296475b6" />
+          </property>
+          <property Id="e9e3b232-fd8f-4f6f-b19f-d851d5a4c524" name="学生" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f6982492-1903-42bc-936d-beae3a5a5c62" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="2946a15c-2f79-488c-90d2-36941de77311" name="任务类型" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1257b2fd-9f1c-4b9e-930d-9b732625da83" />
+        <ownedLiterals>
+          <enumerationLiteral Id="6c8d1814-ab4d-4954-a8c8-36c00116b8b5" name="作业">
+            <elementDefinition Id="c3c8f204-e54f-49a9-9763-ba71dd160772" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="10b6a89c-eea0-4745-b929-8424573b4cdc" name="活动">
+            <elementDefinition Id="c7d5d176-1f1e-4102-addc-50395d2eae7d" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="0ada585d-bede-49eb-b136-f2dead303339" name="练习">
+            <elementDefinition Id="0940f567-928d-4772-81b1-4fc073f65522" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="d67ed39e-8b70-4423-b943-8152027541ce" name="ModelingProject">
+    <elementDefinition Id="31ef5964-b359-491c-867e-1be205d13220" />
+    <profileInstances>
+      <packageHasProfileInstances Id="05e689fe-1138-4f6a-987a-80476d561e0b">
+        <profileInstance Id="a17f5530-9c8c-4fe6-92f7-9e33aee86628" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="7c3db3b4-4d04-4cef-973c-93fed0c2da59">
+        <profileInstance Id="47a03976-2e1b-4d07-95dc-b2b58ef8bcb1" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
