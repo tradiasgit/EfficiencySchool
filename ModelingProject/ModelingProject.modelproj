@@ -23,6 +23,13 @@
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
     <Folder Include="ModelDefinition\" />
+    <Content Include="LocalDatabase.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="LocalDatabase.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LocalDatabase.classdiagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\ModelingProject.uml">
       <SubType>Content</SubType>
     </Content>
